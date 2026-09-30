@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="jianhao-travel-planner · 基准骨架 · 指纹 9c3c6249a4">
+<title>长汀古城路书 · 2026-09-30 出发 · 2 晚 3 天</title>
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --bg:#F7F5F0; --surface:#FCFBF7; --ink:#1C1B17; --ink2:#5C594E; --ink3:#8A8677;
+  --line:#E3DFD3; --accent:#2F5D43; --accent-soft:#E6EEE8; --on-accent:#F7F5F0;
+  --warn:#8A6D1F; --warn-soft:#F3EEDF;
+  --red:#b5493a; --gold:#c8a45c;
+  --radius:14px; --fs:19px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:var(--fs)}
+body{background:var(--bg);color:var(--ink);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:var(--on-accent)}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:var(--on-accent);padding:8px 16px;z-index:99;border-radius:0 0 8px 0;font-size:.8rem}
+.skip:focus{left:0}
+
+/* ---------- 左侧栏 ---------- */
+.side{position:fixed;inset:0 auto 0 0;width:236px;overflow-y:auto;background:#F2EEE3;border-right:1px solid var(--line);display:flex;flex-direction:column;padding:28px 22px;z-index:10}
+.logo{font-size:1.15rem;font-weight:800;letter-spacing:.02em}
+.logo span{color:var(--accent)}
+.logo-sub{font-size:.58rem;letter-spacing:.2em;color:var(--ink3);margin-top:4px;text-transform:uppercase}
+.nav-group{margin-top:26px}
+.nav-label{font-size:.6rem;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase;margin-bottom:8px;padding-left:12px}
+.side nav a{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:9px;font-size:.82rem;color:#4A473E;transition:background .2s,color .2s;margin-bottom:2px}
+.side nav a:hover{background:#E8E3D4;color:var(--ink)}
+.side nav a.on{background:var(--accent);color:var(--on-accent);font-weight:600;box-shadow:0 3px 10px rgba(47,93,67,.25)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.side-foot{margin-top:auto;font-size:.66rem;color:var(--ink3);border-top:1px solid var(--line);padding-top:14px;line-height:2}
+
+/* ---------- 主区 ---------- */
+main{margin-left:236px}
+.wrap{max-width:860px;margin:0 auto;padding:0 44px}
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+.eyebrow{font-size:.62rem;letter-spacing:.24em;color:var(--accent);text-transform:uppercase;font-weight:600;margin-bottom:12px}
+h1{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.35;font-weight:800;max-width:16em}
+h2{font-size:clamp(1.45rem,2.7vw,1.95rem);line-height:1.35;font-weight:800}
+.lead{color:var(--ink2);margin-top:12px;max-width:34em}
+
+/* ---------- 通用卡片/标签/表格 ---------- */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin-bottom:14px}
+.tag{display:inline-block;font-size:.66rem;padding:3px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-weight:600;margin-left:8px;vertical-align:middle}
+.tag.dim{background:transparent;border:1px solid var(--line);color:var(--ink3);font-weight:400}
+.tag.warn{background:var(--warn-soft);color:var(--warn)}
+strong{color:var(--ink)}
+table.tb{width:100%;border-collapse:collapse;margin-top:14px;font-size:.85rem;background:var(--surface);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.tb th{background:#F2EEE3;text-align:left;padding:10px 12px;font-size:.78rem;color:var(--ink2);border-bottom:1px solid var(--line);white-space:nowrap}
+.tb td{padding:10px 12px;border-bottom:1px solid var(--line);color:var(--ink2);vertical-align:top}
+.tb tr:last-child td{border-bottom:none}
+.tb td b{color:var(--ink)}
+
+/* ---------- 天气 ---------- */
+.weather{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.wday{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center}
+.wday .d{font-size:.7rem;color:var(--ink3)}
+.wday .w{font-size:.82rem;font-weight:700;margin-top:4px}
+.wday .t{font-size:.7rem;color:var(--ink2);margin-top:3px}
+
+/* ---------- 清单（可勾选） ---------- */
+.check{list-style:none;margin-top:16px}
+.check li{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:var(--surface);cursor:pointer;transition:background .2s}
+.check li:hover{border-color:var(--accent)}
+.check li.done{background:var(--accent-soft)}
+.check li.done .ct{text-decoration:line-through;color:var(--ink3)}
+.check input{width:22px;height:22px;margin-top:2px;accent-color:var(--accent);flex:none;cursor:pointer}
+.check .ct{font-size:.92rem}
+.check li.hot{border:2px solid var(--warn);background:var(--warn-soft)}
+.check li.hot .ct b{color:#6B5A22}
+
+/* ---------- 每日照片 ---------- */
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 16px}
+.photos.single{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}
+@media (max-width:900px){.photos{grid-template-columns:1fr}.photos.single{max-width:100%}}
+.photos figure{margin:0}
+.photos img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;border:1px solid var(--line)}
+.photos.single img{aspect-ratio:auto;object-fit:contain}
+.photos figcaption{font-size:.68rem;color:var(--ink3);margin-top:5px;line-height:1.5}
+
+/* ---------- 每日 ---------- */
+.day{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;scroll-margin-top:20px}
+.day.today{border:2px solid var(--accent);box-shadow:0 6px 24px rgba(47,93,67,.14)}
+.day-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px}
+.day-idx{font-size:.62rem;letter-spacing:.14em;color:var(--ink3)}
+.day-head h3{font-size:1.15rem;font-weight:800}
+.today-badge{display:none;font-size:.7rem;padding:4px 12px;border-radius:99px;background:var(--accent);color:var(--on-accent);font-weight:700;align-items:center;gap:6px}
+.day.today .today-badge{display:inline-flex}
+.slot{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.slot:last-of-type{border-bottom:none}
+.slot-time{font-size:.78rem;font-weight:700;color:var(--accent);padding-top:2px}
+.slot-body{font-size:.9rem;color:var(--ink2)}
+.slot-body b,.slot-body strong{color:var(--ink);font-weight:700}
+.note-row{display:flex;gap:10px;margin-top:10px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);font-size:.84rem;color:var(--ink2);align-items:flex-start}
+.note-row.photo{background:#EDF0E6}
+.note-row .ic{flex:none}
+.warn-line{margin-top:10px;padding:12px 14px;border-radius:10px;background:var(--warn-soft);font-size:.84rem;color:#6B5A22}
+
+/* ---------- 数据（预算） ---------- */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px 14px}
+.stat .n{font-size:1.5rem;font-weight:800;font-variant-numeric:tabular-nums}
+.stat .l{font-size:.72rem;color:var(--ink2);margin-top:3px}
+
+/* ---------- 提示 ---------- */
+.tips{counter-reset:tip;margin-top:16px}
+.tip{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tip:last-child{border-bottom:none}
+.tip::before{counter-increment:tip;content:counter(tip);width:34px;height:34px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:800;font-size:.85rem;text-align:center;line-height:34px}
+.tip p{font-size:.9rem;color:var(--ink2);padding-top:5px}
+.sos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.sos{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.sos h4{font-size:.95rem;margin-bottom:8px}
+.sos p{font-size:.82rem;color:var(--ink2)}
+
+/* ---------- 工具条/返回顶部 ---------- */
+.toolbar{position:fixed;top:18px;right:20px;z-index:20;display:flex;gap:8px}
+.tbtn{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-size:.78rem;font-weight:700;color:var(--ink2);cursor:pointer;transition:all .2s}
+.tbtn:hover{border-color:var(--accent);color:var(--accent)}
+.backtop{position:fixed;bottom:24px;right:20px;z-index:20;width:46px;height:46px;border-radius:50%;background:var(--accent);color:var(--on-accent);border:none;font-size:1.1rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 4px 14px rgba(47,93,67,.3)}
+.backtop.show{opacity:1;pointer-events:auto}
+
+/* ---------- 入场动效 ---------- */
+html.js section .card,html.js section .day,html.js section .tip,html.js .wday,html.js .sos{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+html.js section.in .card,html.js section.in .day,html.js section.in .tip,html.js section.in .wday,html.js section.in .sos{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html.js section .card,html.js section .day,html.js section .tip,html.js .wday,html.js .sos{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:900px){
+  html{font-size:calc(var(--fs) - 1px)}
+  body{padding-bottom:76px}
+  .side{position:static;width:auto;flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px;padding:12px 14px;border-right:none;border-bottom:1px solid var(--line)}
+  .logo-sub,.side-foot{display:none}
+  .nav-group{margin:0;display:flex;gap:4px;flex-wrap:wrap}
+  .nav-label{display:block;flex:1 1 100%;font-size:.58rem;letter-spacing:.16em;color:var(--ink3);margin:2px 0 4px 2px}
+  .side nav a{padding:7px 10px;font-size:.76rem}
+  .nav-group--chips{margin-top:8px;display:grid;align-items:stretch;grid-template-columns:repeat(auto-fit,minmax(78px,1fr));gap:6px}
+  .nav-group--chips>.nav-label{grid-column:1/-1;margin:0 0 1px 2px}
+  .nav-group--chips a{margin:0;padding:8px 6px;font-size:.74rem;line-height:1.3;justify-content:center;text-align:center;border:1px solid var(--line);background:var(--surface);border-radius:8px}
+  .nav-group--chips a:hover{border-color:var(--accent);background:var(--accent-soft)}
+  .nav-group--chips a.on{border-color:transparent}
+  main{margin-left:0}
+  .wrap{padding:0 18px}
+  section{padding:44px 0}
+  .weather{grid-template-columns:repeat(3,1fr)}
+  .stats{grid-template-columns:1fr 1fr}
+  .sos-grid{grid-template-columns:1fr}
+  .slot{grid-template-columns:76px 1fr;gap:10px}
+  .tb{font-size:.78rem}
+  .tb th,.tb td{padding:8px 8px}
+  .toolbar{top:auto;bottom:14px;left:14px;right:auto;flex-direction:row}
+  .tbtn{padding:7px 11px;font-size:.72rem;box-shadow:0 2px 8px rgba(0,0,0,.08);background:rgba(252,251,247,.92)}
+}
+
+/* ---------- 打印 ---------- */
+@media print{
+  .side,.toolbar,.backtop,.skip{display:none}
+  main{margin-left:0}
+  body{background:#fff;font-size:12pt}
+  .wrap{max-width:100%;padding:0}
+  section{padding:20px 0;page-break-inside:avoid}
+  .day{page-break-inside:avoid}
+  .card,.day,.tip,.wday,.sos{opacity:1;transform:none}
+  .check li.done .ct{text-decoration:none;color:var(--ink)}
+}
+
+/* ---------- 兼容层（宁波/丽水 共用，勿删） ---------- */
+b,strong{color:var(--ink)}
+.warn-line b{color:inherit}
+.tb td .intro{display:block;font-size:.78rem;color:var(--ink3);margin-top:3px;line-height:1.5}
+</style>
+
+<style>
+/* v2 additions */
+.focus-card{background:#fff;border:1px solid #e3dfd3;border-radius:18px;padding:22px;margin:20px 0}
+.countdown{display:flex;gap:10px;margin-top:14px}
+.countdown div{flex:1;background:#f2eee3;border-radius:12px;text-align:center;padding:12px 4px}
+.countdown b{display:block;font-size:1.5rem}
+.route-map{background:#fcfbf7;border:1px solid #e3dfd3;border-radius:18px;padding:18px;margin:20px 0}
+.route-day{cursor:pointer;border:1px solid #e3dfd3;border-radius:12px;padding:12px;margin:8px 0}
+.route-detail{display:none;padding-top:12px}
+.route-day.open .route-detail{display:block}
+.nav-place{color:#2f5d43;text-decoration:underline;cursor:pointer}
+.todo-simple li{padding:10px 0;border-bottom:1px dashed #ddd}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+<div class="toolbar" role="group" aria-label="阅读工具">
+  <button class="tbtn" id="fontDec" aria-label="字号调小">A−</button>
+  <button class="tbtn" id="fontInc" aria-label="字号调大">A＋</button>
+  <button class="tbtn" id="printBtn" aria-label="打印这份路书">🖨 打印</button>
+</div>
+<aside class="side">
+  <div>
+    <div class="logo">长汀古城<span>.</span></div>
+    <div class="logo-sub">2 晚 3 天 · 两人自驾</div>
+  </div>
+  <nav aria-label="页面导航">
+    <div class="nav-group">
+      <div class="nav-label">行程</div>
+      <a href="#overview">总览</a>
+      <a href="#drive">路程</a>
+      <a href="#day1">第 1 天 · 夜驾进汀</a>
+      <a href="#day2">第 2 天 · 孔明灯</a>
+      <a href="#day3">第 3 天 · 返程</a>
+      <a href="#boost">备选</a>
+    </div>
+    <div class="nav-group nav-group--chips">
+      <div class="nav-label">备忘</div>
+      <a href="#ticket">门票</a>
+      <a href="#tips">提示</a>
+      <a href="#stay">住宿</a>
+      <a href="#cost">预算</a>
+      <a href="#sos">应急</a>
+      <a href="#eat">美食</a>
+      <a href="#gift">特产</a>
+    </div>
+  </nav>
+  <div class="side-foot">
+    泉州出发 · 09-30 → 10-02<br>
+    两人自驾 · 住一家不换<br>
+    信息 2026-09-30 实查
+  </div>
+</aside>
+<main id="main">
+<section id="v2-focus">
+<div class="wrap">
+<div class="focus-card">
+<div class="eyebrow">NOW · 此刻关注</div>
+<h2>下一行程事件：卧龙书院孔明灯</h2>
+<p>2026-10-01 20:15 统一放飞</p>
+<div class="countdown">
+<div><b id="cd-day">0</b>天</div>
+<div><b id="cd-hour">0</b>时</div>
+<div><b id="cd-min">0</b>分</div>
+<div><b id="cd-sec">0</b>秒</div>
+</div>
+</div>
+
+<div class="route-map">
+<h2>行程总览地图</h2>
+<svg viewBox="0 0 400 220" width="100%" height="220">
+<path d="M60 40 C150 80 230 80 330 170" fill="none" stroke="#2f5d43" stroke-width="5" stroke-dasharray="8 8"/>
+<circle cx="60" cy="40" r="10" fill="#2f5d43"/><circle cx="170" cy="90" r="10" fill="#c8a45c"/><circle cx="330" cy="170" r="10" fill="#b5493a"/>
+<text x="45" y="25">酒店</text><text x="145" y="75">古城</text><text x="300" y="200">卧龙书院</text>
+</svg>
+</div>
+
+<div class="route-day" onclick="this.classList.toggle('open')">
+Day 1 夜驾进汀
+<div class="route-detail">泉州 → 长汀，高速路线，抵达入住。</div>
+</div>
+<div class="route-day" onclick="this.classList.toggle('open')">
+Day 2 古城一日
+<div class="route-detail">博物馆 → 三元阁 → 店头街 → 济川门 → 卧龙书院。</div>
+</div>
+<div class="route-day" onclick="this.classList.toggle('open')">
+Day 3 返程
+<div class="route-detail">补漏 → 退房 → 泉州。</div>
+</div>
+
+<h2>待办清单</h2>
+<ul class="todo-simple">
+<li>□ 购买卧龙书院门票</li>
+<li>□ 检查车辆胎压、油量</li>
+<li>□ 下载离线地图</li>
+<li>□ 携带身份证</li>
+</ul>
+</div>
+</section>
+
+  <div class="wrap">
+
+    <section id="overview">
+      <div class="eyebrow">OVERVIEW · 总览</div>
+      <h1>长汀古城 2 晚 3 天 · 下班就走的自驾版</h1>
+      <p class="lead">长汀县隶属福建省龙岩市，在福建最西边、武夷山脉南麓，跟江西瑞金挨着。本次玩的"汀州古城"就是长汀县城关（汀州镇），不是单独一个景区——古城街区本身<strong>全免费</strong>，花钱的只有里面几个展馆。</p>
+      <p class="lead">核心节奏：9-30 下班后夜驾进汀 → 10-01 古城一日 + 卧龙书院孔明灯 → 10-02 上午补漏后返程。全程住一家酒店，不换。</p>
+      <div class="warn-line"><b>最大的不确定：10-01、10-02 预报都是小雨。</b>孔明灯是户外项目，雨大或风大可能取消。我把当晚能看的室内/半室内演出全排成了备胎，一条都不少。</div>
+
+      <div class="weather">
+        <div class="wday"><div class="d">9-30 周三</div><div class="w">阴</div><div class="t">23–35 ℃</div></div>
+        <div class="wday"><div class="d">10-01 周四</div><div class="w">小雨</div><div class="t">23–32 ℃</div></div>
+        <div class="wday"><div class="d">10-02 周五</div><div class="w">小雨</div><div class="t">22–29 ℃</div></div>
+      </div>
+      <p style="font-size:.78rem;color:var(--ink3);margin-top:10px">来源：墨迹天气 2026-09-30 12:09 更新。另两家源给的是"多云/阴转雨"，与墨迹不一致——<b>出发前再看一次当日预报终判</b>。温差大，白天 30+，夜里 22 左右。</p>
+
+      <div class="card" id="prepCard">
+        <h2 style="font-size:1.1rem">出发前清单（今天就办）</h2>
+        <ul class="check">
+          <li class="hot"><input type="checkbox" id="p1"><div class="ct"><b>🚨 立刻订酒店</b>——去年国庆长汀全县接待 105.61 万人次。今晚订是最后窗口，优先挑"可免费取消"的</div></li>
+          <li class="hot"><input type="checkbox" id="p2"><div class="ct"><b>🚨 卧龙书院门票提前线上买</b>——携程 / 美团 / 抖音团购 / 公众号「古韵汀州」比价，省得现场排长队</div></li>
+          <li class="hot"><input type="checkbox" id="p3"><div class="ct"><b>🚨 车况检查</b>——胎压、油量、雨刮、玻璃水。厦蓉高速隧道一个接一个，雨天夜驾玻璃水很关键</div></li>
+          <li><input type="checkbox" id="p4"><div class="ct">身份证带上（长汀县博物馆凭身份证免费入馆）</div></li>
+          <li><input type="checkbox" id="p5"><div class="ct">手机支架 + 充电宝 + 离线地图（山区隧道群信号弱）</div></li>
+          <li><input type="checkbox" id="p6"><div class="ct">ETC 确认正常：ETC 上就 ETC 下，别混着来</div></li>
+          <li><input type="checkbox" id="p7"><div class="ct">折叠雨衣（夜场撑伞戳人）、平底防滑鞋（青石板路下雨很滑）、薄外套、蒙脱石散、少量现金</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="drive">
+      <div class="eyebrow">DRIVE · 行</div>
+      <h2>路程与停车</h2>
+
+      <div class="card">
+        <h3 style="font-size:1rem;margin-bottom:6px">泉州 → 长汀（去程）</h3>
+        <table class="tb">
+          <tr><th>项</th><th>数据</th></tr>
+          <tr><td>里程</td><td>约 <b>340–360 公里</b>（腾讯地图 346.8km / 357km，物通 339km，三源互证）</td></tr>
+          <tr><td>正常耗时</td><td><b>4–4.5 小时</b>（腾讯 236 分钟≈3h56m，租租车 4h53m）</td></tr>
+          <tr><td>国庆预留</td><td><b>按 5.5–6.5 小时留</b>（含服务区休息）</td></tr>
+          <tr><td>主路线</td><td>泉州 → G15 沈海高速 → 漳州北连接线 → <b>G76 厦蓉高速</b>（漳州—龙岩—长汀）→ 长汀收费站下 → 汀州大道 → 古城</td></tr>
+        </table>
+        <div class="warn-line">全国高速 9-30 <b>16 时起</b>车流就开始激增，你们下班上路正好撞上高峰，前 100 公里会比较难熬，心里有数。</div>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:1rem;margin-bottom:6px">🚨 高速免费规则（能省 150 块）</h3>
+        <p style="font-size:.9rem;color:var(--ink2)">免费时段 <b>10 月 1 日 0 时 — 10 月 7 日 24 时</b>，7 座及以下小客车。<b>以驶离出口的时间为准</b>，不是上高速的时间。</p>
+        <p style="font-size:.9rem;color:var(--ink2);margin-top:8px">你们是 9-30 晚上（非免费时段）上的高速 → <b>只要 0 点之后下高速，去程全程免费</b>，单程过路费约 150 元直接归零。返程 10-02 也在免费期内，同样免费。</p>
+        <div class="warn-line">实操：算着 23:30 前就能到长汀收费站的话，可以在最后一个服务区歇一歇、慢慢开，0 点后再下。<b>但如果已经又困又累，别为这 150 块硬熬</b>——直接下，安全优先。</div>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:1rem;margin-bottom:6px">🅿️ 停车（自驾最闹心的一环）</h3>
+        <table class="tb">
+          <tr><th>项</th><th>说明</th></tr>
+          <tr><td>推荐停车场</td><td><b>济川门停车场</b>（小型车 10 元/天不限时，离地标最近）、三元阁游客中心停车场、长汀县政府大型停车场</td></tr>
+          <tr><td>收费</td><td>基础 3 元/小时，连续停放全天封顶 10 元；城区路边智慧停车 1 小时内 2 元，24 小时上限 20 元</td></tr>
+          <tr><td>机关共享车位</td><td>去年国庆长汀把县委大院、文体旅游局、县委党校等 <b>21 个机关单位停车场纳入"假日共享"</b>，2600 余个车位。<span class="intro">⚠️ 今年是否延续未核实，到现场看指示牌或问交警</span></td></tr>
+        </table>
+        <div class="warn-line">福建交警原话：三元阁、济川门古城核心景区假期每天 <b>10–22 时</b>人流车流激增，兆征路主路停车位十分紧张，<b>建议不驾驶汽车进入兆征路主路</b>。古城核心石板街区禁止机动车驶入，别停小巷子，会违停抓拍。<br><br><b>策略：车停进酒店/正规停车场之后就别动了，古城全程步行。</b></div>
+      </div>
+
+      <div class="photos single">
+        <figure>
+          <svg viewBox="0 0 680 470" role="img" aria-label="汀州古城核心区手绘导览示意图" style="width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#FBF8F0">
+            <defs>
+              <linearGradient id="wtr" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#CBDCE2"/><stop offset="1" stop-color="#DCE8EC"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="680" height="470" fill="#FBF8F0"/>
+            <text x="18" y="26" font-size="13" font-weight="700" fill="#1C1B17">汀州古城核心区 · 手绘示意</text>
+            <text x="18" y="44" font-size="10.5" fill="#8A8677">非等比例 · 仅表达相对方位 · 2026-09-30 制</text>
+
+            <path d="M430 62 C420 140, 470 200, 452 270 C436 336, 480 380, 466 452" stroke="#CBDCE2" stroke-width="54" fill="none" stroke-linecap="round"/>
+            <path d="M430 62 C420 140, 470 200, 452 270 C436 336, 480 380, 466 452" stroke="url(#wtr)" stroke-width="46" fill="none" stroke-linecap="round"/>
+            <path d="M438 96 C432 120, 442 140, 436 164" stroke="#FFFFFF" stroke-width="2" fill="none" opacity=".75"/>
+            <path d="M458 300 C452 324, 462 344, 456 368" stroke="#FFFFFF" stroke-width="2" fill="none" opacity=".75"/>
+            <text x="500" y="150" font-size="15" font-weight="700" fill="#5C7F8A">汀</text>
+            <text x="500" y="172" font-size="15" font-weight="700" fill="#5C7F8A">江</text>
+            <text x="497" y="196" font-size="10.5" fill="#8A8677">北 → 南</text>
+
+            <rect x="60" y="90" width="330" height="330" rx="16" fill="#EFEAE0" stroke="#E3DFD3" stroke-width="1.5"/>
+            <text x="76" y="112" font-size="11.5" font-weight="700" fill="#8A8677">古城核心（汀江西岸）</text>
+
+            <g>
+              <rect x="92" y="140" width="86" height="34" rx="9" fill="#FCFBF7" stroke="#2F5D43" stroke-width="2"/>
+              <text x="135" y="162" font-size="12.5" font-weight="700" fill="#1C1B17" text-anchor="middle">三元阁</text>
+              <path d="M124 118 l11 -16 l11 16 z" fill="#2F5D43"/>
+              <rect x="118" y="118" width="34" height="22" fill="#2F5D43" opacity=".18"/>
+            </g>
+
+            <g>
+              <rect x="112" y="188" width="52" height="112" rx="10" fill="#E6EEE8" stroke="#2F5D43" stroke-width="1.8"/>
+              <text x="138" y="212" font-size="12" font-weight="700" fill="#2F5D43" text-anchor="middle">店</text>
+              <text x="138" y="230" font-size="12" font-weight="700" fill="#2F5D43" text-anchor="middle">头</text>
+              <text x="138" y="248" font-size="12" font-weight="700" fill="#2F5D43" text-anchor="middle">街</text>
+              <text x="138" y="268" font-size="10" fill="#5C594E" text-anchor="middle">明清古街</text>
+              <text x="138" y="284" font-size="10" fill="#8A8677" text-anchor="middle">免费</text>
+            </g>
+
+            <g>
+              <rect x="248" y="150" width="106" height="40" rx="10" fill="#FCFBF7" stroke="#2F5D43" stroke-width="2"/>
+              <text x="301" y="168" font-size="12.5" font-weight="700" fill="#1C1B17" text-anchor="middle">汀州文庙</text>
+              <text x="301" y="184" font-size="10" fill="#5C594E" text-anchor="middle">古树参天</text>
+            </g>
+
+            <g>
+              <rect x="248" y="212" width="106" height="40" rx="10" fill="#FCFBF7" stroke="#8A6D1F" stroke-width="2"/>
+              <text x="301" y="230" font-size="12.5" font-weight="700" fill="#1C1B17" text-anchor="middle">县博物馆</text>
+              <text x="301" y="246" font-size="10" fill="#8A6D1F" text-anchor="middle">凭身份证 · 周一闭馆</text>
+            </g>
+
+            <g>
+              <rect x="88" y="330" width="132" height="52" rx="10" fill="#F3EEDF" stroke="#8A6D1F" stroke-width="2.4"/>
+              <text x="154" y="352" font-size="13" font-weight="800" fill="#6B5A22" text-anchor="middle">卧龙书院</text>
+              <text x="154" y="370" font-size="10.5" fill="#8A6D1F" text-anchor="middle">文昌阁 · 孔明灯 20:15</text>
+            </g>
+
+            <g>
+              <rect x="248" y="288" width="106" height="40" rx="10" fill="#FCFBF7" stroke="#2F5D43" stroke-width="1.8"/>
+              <text x="301" y="306" font-size="12" font-weight="700" fill="#1C1B17" text-anchor="middle">八喜楼/大夫第</text>
+              <text x="301" y="322" font-size="10" fill="#5C594E" text-anchor="middle">沉浸式演出</text>
+            </g>
+
+            <g>
+              <rect x="290" y="368" width="76" height="34" rx="9" fill="#FCFBF7" stroke="#2F5D43" stroke-width="1.8"/>
+              <text x="328" y="390" font-size="11.5" font-weight="700" fill="#1C1B17" text-anchor="middle">古城墙</text>
+            </g>
+
+            <g>
+              <rect x="366" y="238" width="62" height="36" rx="9" fill="#2F5D43" stroke="#2F5D43" stroke-width="1.5"/>
+              <text x="397" y="256" font-size="12" font-weight="700" fill="#F7F5F0" text-anchor="middle">济川门</text>
+              <text x="397" y="270" font-size="9.5" fill="#D9E5DC" text-anchor="middle">临江</text>
+            </g>
+            <line x1="428" y1="256" x2="452" y2="256" stroke="#8A6D1F" stroke-width="2.5" stroke-dasharray="5 4"/>
+            <text x="440" y="234" font-size="9.5" fill="#8A6D1F" text-anchor="middle">跳石桥</text>
+
+            <g>
+              <rect x="498" y="238" width="130" height="46" rx="10" fill="#E6EEE8" stroke="#2F5D43" stroke-width="1.8"/>
+              <text x="563" y="258" font-size="12.5" font-weight="700" fill="#2F5D43" text-anchor="middle">水东街</text>
+              <text x="563" y="274" font-size="10" fill="#5C594E" text-anchor="middle">江东岸 · 小吃集中</text>
+            </g>
+
+            <g>
+              <rect x="498" y="316" width="130" height="42" rx="10" fill="#FCFBF7" stroke="#8A6D1F" stroke-width="1.8"/>
+              <text x="563" y="334" font-size="11.5" font-weight="700" fill="#1C1B17" text-anchor="middle">汀江竹筏码头</text>
+              <text x="563" y="349" font-size="9.5" fill="#8A6D1F" text-anchor="middle">打铁花 / 鳌鱼灯</text>
+            </g>
+
+            <g opacity=".95">
+              <circle cx="86" cy="356" r="13" fill="#2F5D43"/>
+              <text x="86" y="361" font-size="12" font-weight="800" fill="#F7F5F0" text-anchor="middle">1</text>
+              <circle cx="301" cy="182" r="13" fill="#2F5D43"/>
+              <text x="301" y="187" font-size="12" font-weight="800" fill="#F7F5F0" text-anchor="middle">2</text>
+              <circle cx="154" cy="300" r="13" fill="#8A6D1F"/>
+              <text x="154" y="305" font-size="12" font-weight="800" fill="#F7F5F0" text-anchor="middle">3</text>
+            </g>
+            <path d="M86 371 L86 330" stroke="#2F5D43" stroke-width="2" stroke-dasharray="4 4" opacity=".55"/>
+            <path d="M301 197 L301 208" stroke="#2F5D43" stroke-width="2" stroke-dasharray="4 4" opacity=".55"/>
+
+            <g>
+              <circle cx="628" cy="404" r="24" fill="#FCFBF7" stroke="#E3DFD3" stroke-width="1.5"/>
+              <path d="M628 384 l9 22 l-9 -6 l-9 6 z" fill="#2F5D43"/>
+              <text x="628" y="426" font-size="11" font-weight="700" fill="#8A8677" text-anchor="middle">N</text>
+            </g>
+
+            <g>
+              <rect x="404" y="404" width="262" height="52" rx="10" fill="#FCFBF7" stroke="#E3DFD3" stroke-width="1.5"/>
+              <text x="416" y="422" font-size="10.5" font-weight="700" fill="#1C1B17">动线：① 三元阁 → ② 文庙 → 博物馆</text>
+              <text x="416" y="438" font-size="10.5" fill="#5C594E">→ 店头街 → 济川门 → 水东街</text>
+              <text x="416" y="452" font-size="10.5" font-weight="700" fill="#8A6D1F">→ ③ 卧龙书院（夜场放灯）</text>
+            </g>
+          </svg>
+          <figcaption>汀州古城核心区手绘导览示意图（示意，非等比例）。汀江自北向南穿城，古城主体在西岸，水东街在东岸。① ② ③ 为 Day2 白天的建议动线顺序。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="day1">
+      <div class="eyebrow">DAY 1 · 09-30 周三</div>
+      <div class="day">
+        <div class="day-head">
+          <div class="day-idx">DAY 1</div>
+          <h3>夜驾进汀</h3>
+          <span class="today-badge">今天</span>
+        </div>
+        <div class="photos single">
+          <figure>
+            <svg viewBox="0 0 680 250" role="img" aria-label="泉州到长汀高速路线示意图" style="width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#FBF8F0">
+              <rect x="0" y="0" width="680" height="250" fill="#FBF8F0"/>
+              <text x="18" y="26" font-size="13" font-weight="700" fill="#1C1B17">Day 1 路线 · 泉州 → 长汀</text>
+              <text x="18" y="44" font-size="10.5" fill="#8A8677">示意，非等比例 · 2026-09-30 制</text>
+              <line x1="60" y1="128" x2="620" y2="128" stroke="#E3DFD3" stroke-width="26" stroke-linecap="round"/>
+              <line x1="60" y1="128" x2="320" y2="128" stroke="#2F5D43" stroke-width="26" stroke-linecap="round" opacity=".55"/>
+              <line x1="320" y1="128" x2="620" y2="128" stroke="#8A6D1F" stroke-width="26" stroke-linecap="round" opacity=".65"/>
+              <text x="150" y="112" font-size="11" font-weight="700" fill="#2F5D43" text-anchor="middle">G15 沈海高速</text>
+              <text x="470" y="112" font-size="11" font-weight="700" fill="#8A6D1F" text-anchor="middle">G76 厦蓉高速（隧道群）</text>
+              <g><circle cx="60" cy="128" r="17" fill="#2F5D43"/><text x="60" y="133" font-size="12" font-weight="800" fill="#F7F5F0" text-anchor="middle">泉</text></g>
+              <g><circle cx="320" cy="128" r="13" fill="#FCFBF7" stroke="#2F5D43" stroke-width="2"/><text x="320" y="133" font-size="11" font-weight="700" fill="#1C1B17" text-anchor="middle">漳</text></g>
+              <g><circle cx="470" cy="128" r="13" fill="#FCFBF7" stroke="#8A6D1F" stroke-width="2"/><text x="470" y="133" font-size="11" font-weight="700" fill="#1C1B17" text-anchor="middle">岩</text></g>
+              <g><circle cx="620" cy="128" r="17" fill="#8A6D1F"/><text x="620" y="133" font-size="12" font-weight="800" fill="#F7F5F0" text-anchor="middle">汀</text></g>
+              <text x="60" y="166" font-size="10.5" fill="#5C594E" text-anchor="middle">泉州</text>
+              <text x="320" y="166" font-size="10.5" fill="#5C594E" text-anchor="middle">漳州</text>
+              <text x="470" y="166" font-size="10.5" fill="#5C594E" text-anchor="middle">龙岩</text>
+              <text x="620" y="166" font-size="10.5" fill="#5C594E" text-anchor="middle">长汀</text>
+              <g><rect x="378" y="184" width="26" height="16" rx="4" fill="#E3DFD3"/><path d="M378 184 h26 v4 h-26 z" fill="#C9C4B4"/><text x="416" y="197" font-size="10.5" fill="#8A8677">隧道密集段，注意灯光与车距</text></g>
+              <rect x="40" y="206" width="600" height="34" rx="9" fill="#F3EEDF" stroke="#E3DFD3"/>
+              <text x="58" y="228" font-size="11.5" font-weight="700" fill="#6B5A22">340–360 km ｜ 正常 4–4.5 h ｜ 国庆按 5.5–6.5 h 留 ｜ 0 点后下高速 = 免过路费</text>
+            </svg>
+            <figcaption>Day 1 路线示意（示意，非等比例）。沈海转厦蓉，龙岩之后隧道一个接一个。</figcaption>
+          </figure>
+        </div>
+        <div class="slot"><div class="slot-time">18:00–18:30</div><div class="slot-body">泉州下班，车上路。<b>假设 18:30 上路</b>，你按实际下班时间顺延</div></div>
+        <div class="slot"><div class="slot-time">18:30–19:30</div><div class="slot-body">出城上高速。这段是全天最堵，导航看实时路况，必要时绕一段</div></div>
+        <div class="slot"><div class="slot-time">19:30–23:30</div><div class="slot-body">厦蓉高速长途。<b>建议出发前在泉州先吃饱</b>，服务区国庆夜人会很多</div></div>
+        <div class="slot"><div class="slot-time">23:30–00:30</div><div class="slot-body">抵长汀。想省过路费就卡在 <b>0 点后</b>下高速</div></div>
+        <div class="slot"><div class="slot-time">00:30</div><div class="slot-body">入住，睡。两人可轮换开，别一个人硬扛</div></div>
+        <div class="note-row"><span class="ic">🍽</span><div><b>晚餐</b>：泉州出发前解决 / 服务区（带点干粮和水备用）</div></div>
+        <div class="note-row"><span class="ic">🌙</span><div><b>宵夜 · 随意</b>：酒店周边，或长汀宾馆夜宵自助（营业到 22:30，55 元/位，能吃到簸箕粄、泡猪腰这类本地小吃）</div></div>
+        <div class="note-row"><span class="ic">🅿️</span><div>今晚到店先把车停好，问清楚前台"明天出去怎么走、车能不能一直停"</div></div>
+      </div>
+    </section>
+
+    <section id="day2">
+      <div class="eyebrow">DAY 2 · 10-01 周四</div>
+      <div class="day">
+        <div class="day-head">
+          <div class="day-idx">DAY 2</div>
+          <h3>古城一日 + 孔明灯（重头戏）</h3>
+          <span class="today-badge">今天</span>
+        </div>
+        <div class="photos single">
+          <figure>
+            <svg viewBox="0 0 680 320" role="img" aria-label="Day2 白天动线与卧龙书院夜场时间轴" style="width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#FBF8F0">
+              <rect x="0" y="0" width="680" height="320" fill="#FBF8F0"/>
+              <text x="18" y="26" font-size="13" font-weight="700" fill="#1C1B17">Day 2 · 白天动线 + 卧龙书院夜场时间轴</text>
+              <text x="18" y="44" font-size="10.5" fill="#8A8677">示意，非等比例 · 2026-09-30 制</text>
+              <text x="24" y="76" font-size="11" font-weight="700" fill="#2F5D43">白天（西岸古城内，全程步行）</text>
+              <line x1="30" y1="104" x2="650" y2="104" stroke="#E3DFD3" stroke-width="3"/>
+              <g><circle cx="52" cy="104" r="7" fill="#2F5D43"/><text x="52" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">博物馆</text><text x="52" y="140" font-size="9.5" fill="#8A8677" text-anchor="middle">10:00</text></g>
+              <g><circle cx="152" cy="104" r="7" fill="#2F5D43"/><text x="152" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">三元阁</text><text x="152" y="140" font-size="9.5" fill="#8A8677" text-anchor="middle">11:00</text></g>
+              <g><circle cx="252" cy="104" r="7" fill="#2F5D43"/><text x="252" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">店头街</text><text x="252" y="140" font-size="9.5" fill="#8A8677" text-anchor="middle">11:30 午餐</text></g>
+              <g><circle cx="368" cy="104" r="7" fill="#2F5D43"/><text x="368" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">文庙·城墙·济川门</text><text x="368" y="140" font-size="9.5" fill="#8A8677" text-anchor="middle">13:30</text></g>
+              <g><circle cx="490" cy="104" r="7" fill="#2F5D43"/><text x="490" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">八喜楼</text><text x="490" y="140" font-size="9.5" fill="#8A8677" text-anchor="middle">15:00</text></g>
+              <g><circle cx="600" cy="104" r="9" fill="#FCFBF7" stroke="#2F5D43" stroke-width="2"/><text x="600" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">回店休整</text><text x="600" y="140" font-size="9.5" fill="#8A8677" text-anchor="middle">16:30</text></g>
+              <line x1="30" y1="164" x2="650" y2="164" stroke="#E3DFD3" stroke-width="1"/>
+              <text x="24" y="192" font-size="11" font-weight="700" fill="#8A6D1F">夜场（卧龙书院内，须持书院门票）</text>
+              <line x1="30" y1="220" x2="650" y2="220" stroke="#E3DFD3" stroke-width="3"/>
+              <g><circle cx="60" cy="220" r="7" fill="#8A6D1F"/><text x="60" y="242" font-size="10.5" fill="#5C594E" text-anchor="middle">领孔明灯</text><text x="60" y="256" font-size="9.5" fill="#8A6D1F" text-anchor="middle">19:00–20:00</text></g>
+              <g><circle cx="190" cy="220" r="7" fill="#8A6D1F"/><text x="190" y="242" font-size="10.5" fill="#5C594E" text-anchor="middle">光影秀</text><text x="190" y="256" font-size="9.5" fill="#8A6D1F" text-anchor="middle">19:25</text></g>
+              <g><circle cx="320" cy="220" r="7" fill="#8A6D1F"/><text x="320" y="242" font-size="10.5" fill="#5C594E" text-anchor="middle">光影秀</text><text x="320" y="256" font-size="9.5" fill="#8A6D1F" text-anchor="middle">20:05</text></g>
+              <g><circle cx="446" cy="220" r="16" fill="#8A6D1F"/><text x="446" y="225" font-size="11" font-weight="800" fill="#F7F5F0" text-anchor="middle">孔明灯</text><text x="446" y="256" font-size="10" font-weight="700" fill="#8A6D1F" text-anchor="middle">20:15–20:30 放飞</text></g>
+              <g><circle cx="576" cy="220" r="7" fill="#2F5D43"/><text x="576" y="242" font-size="10.5" fill="#5C594E" text-anchor="middle">打铁花</text><text x="576" y="256" font-size="9.5" fill="#2F5D43" text-anchor="middle">21:00 江边</text></g>
+              <rect x="40" y="274" width="600" height="34" rx="9" fill="#F3EEDF" stroke="#E3DFD3"/>
+              <text x="58" y="296" font-size="11.5" font-weight="700" fill="#6B5A22">领灯押金 10 元/盏 · 涂鸦不退款 · 放飞后记得拿灯退押金</text>
+            </svg>
+            <figcaption>Day 2 动线与夜场时间轴（示意）。晚上 20:15 那 15 分钟是这趟的主菜，前后都别安排别的事。</figcaption>
+          </figure>
+        </div>
+        <div class="note-row"><span class="ic">🧭</span><div>昨晚开了夜车，今天<b>睡到自然醒，10 点前后出门</b>就够——古城不大，不用赶。</div></div>
+        <div class="slot"><div class="slot-time">09:30</div><div class="slot-body">早餐：簸箕粄 + 汆牛肉（忌口口诀见美食篇）</div></div>
+        <div class="slot"><div class="slot-time">10:00</div><div class="slot-body"><b>长汀县博物馆（汀州试院）</b>——免费，凭身份证，9 点有免费讲解，逛完约 1 小时。对面就是三元阁（⚠️ 周一闭馆，10-01 是周四，正常开）</div></div>
+        <div class="slot"><div class="slot-time">11:00</div><div class="slot-body"><b>三元阁</b> 登城楼俯瞰古城屋顶连绵；11:30–11:40 有古筝 + 独舞《鸾月良宵》；广场状元 NPC 互动送《卧龙科举手册》</div></div>
+        <div class="slot"><div class="slot-time">11:30</div><div class="slot-body"><b>店头街</b> 明清古街慢慢逛（免费）</div></div>
+        <div class="slot"><div class="slot-time">12:00</div><div class="slot-body">午餐：七星饭店（店头街 154 号）</div></div>
+        <div class="slot"><div class="slot-time">13:30</div><div class="slot-body"><b>汀州文庙 → 古城墙 → 济川门</b>（济川门要票，含在联票里）。济川门 15:00–15:10 有《丽影风华》舞蹈</div></div>
+        <div class="slot"><div class="slot-time">15:00</div><div class="slot-body"><b>客家八喜楼 + 大夫第</b>（联票内）。八喜楼 15:30、16:30 有沉浸式客家八喜演出</div></div>
+        <div class="slot"><div class="slot-time">16:30</div><div class="slot-body">回酒店休整 1.5 小时（躲小雨 + 躲 10–22 时人流高峰，这个歇很关键）</div></div>
+        <div class="slot"><div class="slot-time">17:30</div><div class="slot-body"><b>水东街</b>晚餐（"红色小上海"，44 家小吃店集中地）</div></div>
+        <div class="slot"><div class="slot-time">18:30</div><div class="slot-body">汀江边等日落、看夜景（免费）</div></div>
+        <div class="slot"><div class="slot-time">19:00–20:00</div><div class="slot-body">🚨 <b>进卧龙书院，领孔明灯</b>（押金 10 元/盏）。同时看百家姓竹灯墙、19:25 文昌阁光影秀《文脉汀州》第一场</div></div>
+        <div class="slot"><div class="slot-time">20:05</div><div class="slot-body">光影秀第二场</div></div>
+        <div class="slot"><div class="slot-time">20:15–20:30</div><div class="slot-body">🚨🚨 <b>文昌阁前千盏孔明灯统一放飞</b>，NPC 状元现场加持 ← 本次核心</div></div>
+        <div class="slot"><div class="slot-time">20:40</div><div class="slot-body">光影秀第三场</div></div>
+        <div class="slot"><div class="slot-time">21:00</div><div class="slot-body">可选：汀江竹筏码头<b>非遗打铁花</b> 21:00–21:10；<b>鳌鱼花灯巡游</b> 21:15–21:30</div></div>
+        <div class="slot"><div class="slot-time">21:30</div><div class="slot-body">步行回酒店（古城内走 5–10 分钟）</div></div>
+
+        <div class="warn-line"><b>孔明灯三条硬提醒：</b><br>1. 19:00–20:00 领灯，押金 10 元/盏，活动结束当天无损坏、无涂鸦回收退还押金，涂了画了不退。<br>2. 20:15–20:30 是统一放飞，自己提前放了就没那个场面，跟着大部队一起。<br>3. 进场必须有卧龙书院门票（60 元/人）或含卧龙书院的联票。</div>
+        <div class="note-row"><span class="ic">☔</span><div><b>雨天 Plan B（孔明灯若取消）</b>：三元阁古筝 20:00–20:10 场 → 水东街邓紫棋模仿秀 19:35–20:35 → 八喜楼 20:00 场（室内，不淋雨）→ 汀江打铁花 21:00（雨小的话）。古城街区本身全免费，哪怕一个展馆都不进，光逛街区看免费演出也能撑满一晚。</div></div>
+      </div>
+    </section>
+
+    <section id="day3">
+      <div class="eyebrow">DAY 3 · 10-02 周五</div>
+      <div class="day">
+        <div class="day-head">
+          <div class="day-idx">DAY 3</div>
+          <h3>上午补漏 + 返程</h3>
+          <span class="today-badge">今天</span>
+        </div>
+        <div class="photos single">
+          <figure>
+            <svg viewBox="0 0 680 230" role="img" aria-label="Day3 上午补漏与返程时间轴" style="width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#FBF8F0">
+              <rect x="0" y="0" width="680" height="230" fill="#FBF8F0"/>
+              <text x="18" y="26" font-size="13" font-weight="700" fill="#1C1B17">Day 3 · 上午补漏 + 返程时间轴</text>
+              <text x="18" y="44" font-size="10.5" fill="#8A8677">示意，非等比例 · 2026-09-30 制</text>
+              <line x1="40" y1="100" x2="640" y2="100" stroke="#E3DFD3" stroke-width="4" stroke-linecap="round"/>
+              <line x1="40" y1="100" x2="330" y2="100" stroke="#2F5D43" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+              <line x1="330" y1="100" x2="640" y2="100" stroke="#8A6D1F" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+              <g><circle cx="40" cy="100" r="8" fill="#2F5D43"/><text x="40" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">早餐</text><text x="40" y="140" font-size="9.5" fill="#8A8677" text-anchor="middle">08:00</text></g>
+              <g><circle cx="140" cy="100" r="8" fill="#2F5D43"/><text x="140" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">书院白天场</text><text x="140" y="140" font-size="9.5" fill="#8A8677" text-anchor="middle">09:00</text></g>
+              <g><circle cx="250" cy="100" r="8" fill="#2F5D43"/><text x="250" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">买豆腐干</text><text x="250" y="140" font-size="9.5" fill="#8A8677" text-anchor="middle">10:30</text></g>
+              <g><circle cx="330" cy="100" r="10" fill="#FCFBF7" stroke="#8A6D1F" stroke-width="2.5"/><text x="330" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">退房+午餐</text><text x="330" y="140" font-size="9.5" fill="#8A6D1F" text-anchor="middle">11:00–12:30</text></g>
+              <g><circle cx="470" cy="100" r="8" fill="#8A6D1F"/><text x="470" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">出发返程</text><text x="470" y="140" font-size="9.5" fill="#8A6D1F" text-anchor="middle">12:30</text></g>
+              <g><circle cx="640" cy="100" r="8" fill="#2F5D43"/><text x="640" y="126" font-size="10.5" fill="#5C594E" text-anchor="middle">抵泉州</text><text x="640" y="140" font-size="9.5" fill="#2F5D43" text-anchor="middle">18:00 前后</text></g>
+              <rect x="40" y="164" width="600" height="34" rx="9" fill="#E6EEE8" stroke="#E3DFD3"/>
+              <text x="58" y="186" font-size="11.5" font-weight="700" fill="#2F5D43">10-02 不是返程最高峰（高峰在 10-06 / 10-07）· 按 5–6 h 预留</text>
+            </svg>
+            <figcaption>Day 3 时间轴（示意）。上午把书院白天场和特产补齐，中午前后上路，天黑前到泉州。</figcaption>
+          </figure>
+        </div>
+        <div class="slot"><div class="slot-time">08:00</div><div class="slot-body">早餐：胜泉小吃（泡猪腰）/ 斋公烧麦</div></div>
+        <div class="slot"><div class="slot-time">09:00</div><div class="slot-body"><b>卧龙书院白天场补逛</b>（昨晚灯放了、院子没细看的）：百家姓灯展、"我在汀州考科举"闯关（10:00–21:00，集满可兑换汀州古城限定吧唧或竹编小灯笼）</div></div>
+        <div class="slot"><div class="slot-time">10:30</div><div class="slot-body">店头街买<b>长汀豆腐干</b>做特产</div></div>
+        <div class="slot"><div class="slot-time">11:00</div><div class="slot-body">退房，行李装车</div></div>
+        <div class="slot"><div class="slot-time">11:30</div><div class="slot-body">午餐：三元老彭饭店</div></div>
+        <div class="slot"><div class="slot-time">12:30–13:00</div><div class="slot-body">出发返程泉州</div></div>
+        <div class="slot"><div class="slot-time">18:00–18:30</div><div class="slot-body">抵泉州（按 5–6 小时预留；10-02 不是返程最高峰，高峰在 10-06/10-07）</div></div>
+        <div class="note-row"><span class="ic">🚗</span><div><b>为什么不建议去丁屋岭</b>：丁屋岭在古城镇丁黄村，进山道路假期每天 9–18 时车流集中，山路弯多坡陡易缓行（福建交警明示）。它的重头戏是 10-02–10-05 每晚 18:30 的全猪宴篝火（需提前预约购票），跟返程正面冲突。跑一趟山路上下来，返程就得摸黑开了。</div></div>
+      </div>
+    </section>
+
+    <section id="boost">
+      <div class="eyebrow">BOOST · 备选</div>
+      <h2>时间富余才去的点</h2>
+      <div class="card">
+        <p style="font-size:.9rem;color:var(--ink2)"><b>曲凹哩码头</b>：飞天威亚"天女散花"、吉他弹唱，上午 9:50–11:10 有场。⚠️ 距县城距离未核实，想去先问酒店或现场确认。</p>
+        <p style="font-size:.9rem;color:var(--ink2);margin-top:8px"><b>三洲湿地公园</b>：联票内项目。⚠️ 距离未核实。</p>
+        <p style="font-size:.9rem;color:var(--ink2);margin-top:8px"><b>夜游汀江画舫</b>：60–76 元/人（两说，见门票表），看两岸灯火。</p>
+        <p style="font-size:.9rem;color:var(--ink2);margin-top:8px"><b>水东街明星模仿秀</b>：10-01–10-03 是邓紫棋模仿秀（叶萱），每晚 19:35–20:35。</p>
+        <p style="font-size:.9rem;color:var(--ink2);margin-top:8px"><b>谢公坊</b>：唐风演艺 + 君子六艺集章，联票 108 元含卧龙书院 + 济川门 + 木工传习所。</p>
+      </div>
+    </section>
+
+    <section id="ticket">
+      <div class="eyebrow">TICKET · 门票与预约</div>
+      <h2>门票与预约</h2>
+      <table class="tb">
+        <tr><th>项目</th><th>价格</th><th>来源 / 备注</th></tr>
+        <tr><td><b>卧龙书院 · 成人</b></td><td><b>60 元</b></td><td>携程在售页 2026-09-30</td></tr>
+        <tr><td>卧龙书院 · 儿童/老人</td><td>30 元</td><td>携程</td></tr>
+        <tr><td>济川门 · 成人</td><td>29 元（攻略口径 30 元）</td><td>携程 / 攻略，<b>两说并列</b></td></tr>
+        <tr><td>八喜楼 + 大夫第联票 · 成人</td><td>59 元</td><td>携程</td></tr>
+        <tr><td>八喜楼 + 大夫第联票 · 优待</td><td>39 元</td><td>携程</td></tr>
+        <tr><td>客家木工传习所</td><td>10 元</td><td>携程</td></tr>
+        <tr><td>联票 A（汀州古城+济川门+卧龙书院+木工传习所+汀江源馆+曲凹哩+三洲湿地）</td><td>85 元 / 88 元</td><td>携程，同页面<b>两个价</b></td></tr>
+        <tr><td>联票 B（济川门+卧龙书院+八喜馆+大夫第+木工传习所）</td><td>98 元，15 天有效</td><td>携程攻略 2026</td></tr>
+        <tr><td>夜游汀江游船</td><td>76 元（携程）/ 60 元（攻略）</td><td><b>两说并列</b></td></tr>
+        <tr><td>孔明灯押金</td><td>10 元/盏，无损回收可退</td><td>官方节目单</td></tr>
+        <tr><td>长汀县博物馆</td><td>免费，凭身份证，周一闭馆</td><td>攻略</td></tr>
+        <tr><td>古城墙 / 店头街 / 水东街 / 街区</td><td><b>全免费</b></td><td>多源一致</td></tr>
+      </table>
+      <div class="warn-line">🔴 <b>官方渠道未查到</b>（"古韵汀州"公众号票价未核实）。价格以购票平台当日显示为准，建议线上比价：<b>携程 / 美团 / 抖音团购 / 官方公众号</b> 四处看，注意比对日期档别搞混。</div>
+      <div class="card" style="margin-top:14px">
+        <h3 style="font-size:1rem;margin-bottom:6px">🎁 惠民福利（官方节目单）</h3>
+        <p style="font-size:.9rem;color:var(--ink2)"><b>生肖属马、姓马、名字带"马"</b> 的游客，凭有效身份证（按身份证公历年份）<b>免景区首道门票</b>。你们俩看看有没有符合条件的。</p>
+      </div>
+    </section>
+
+    <section id="tips">
+      <div class="eyebrow">TIPS · 提示与避雷</div>
+      <h2>提示与避雷</h2>
+      <div class="tips">
+        <div class="tip"><p><b>别开车进兆征路主路</b>——10–22 时人流车流激增，停车位十分紧张，交警明说不建议。应对：车停济川门/三元阁/县政府停车场，全程步行。</p></div>
+        <div class="tip"><p><b>巷子里停车会被抓拍</b>——古城核心石板街区禁机动车。应对：只停正规停车场，多走 5 分钟换来不被贴条。</p></div>
+        <div class="tip"><p><b>青石板路下雨很滑</b>——应对：平底防滑鞋，别穿高跟鞋。</p></div>
+        <div class="tip"><p><b>撑伞逛夜场不方便</b>——人多灯多，伞会戳到人。应对：带折叠雨衣，比伞实用。</p></div>
+        <div class="tip"><p><b>孔明灯押金 10 元，涂了画了不退</b>——应对：别在灯上写字画画，想祈愿心里默念就好，放飞后记得拿灯去退押金。</p></div>
+        <div class="tip"><p><b>景区内河田鸡 68 元以上基本是溢价</b>——应对：走到店头街/三元阁的本地店，人均 50–60 吃得很实在。</p></div>
+        <div class="tip"><p><b>散装米酒价格水分大</b>——应对：超市买瓶装，性价比高得多。</p></div>
+        <div class="tip"><p><b>巷内小店可能只收现金</b>——应对：备点零钱。</p></div>
+        <div class="tip"><p><b>别信黄牛推销的"古城通票"</b>——主街本身免费，别花冤枉钱。</p></div>
+        <div class="tip"><p><b>9-30 晚高峰 + 夜驾疲劳</b>——应对：两人轮换开，服务区该歇就歇；别为了省 150 块过路费硬熬到 0 点。</p></div>
+      </div>
+
+      <div class="card" style="margin-top:20px">
+        <h3 style="font-size:1rem;margin-bottom:8px">附：官方活动节目单（10-01 当天可用）</h3>
+        <p style="font-size:.86rem;color:var(--ink2)"><b>卧龙书院</b>｜NPC"我在汀州考科举" 全天 10:00–21:00；百家姓竹灯展 全天；舞蹈《万鱼映月》《青烟里》等 10:30 / 15:00 / 16:00 / 20:00 / 21:00；乐器 10:20 / 11:10 / 14:50 / 15:50 / 16:50 / 19:00 / 19:50 / 20:50；文昌阁光影秀 19:25 / 20:05 / 20:40 / 21:30；<b>千灯祈福放飞 20:15–20:30</b>（领灯 19:00–20:00）</p>
+        <p style="font-size:.86rem;color:var(--ink2);margin-top:8px"><b>三元阁</b>｜古筝 + 独舞 10:30 / 11:30 / 15:00 / 16:00 / 17:00 / 19:00 / 20:00 / 21:00；状元 NPC 10:00 / 11:00 / 14:45 / 15:45 / 19:00</p>
+        <p style="font-size:.86rem;color:var(--ink2);margin-top:8px"><b>济川门</b>｜舞蹈 10:30 / 15:00 / 16:00 / 19:45 / 21:00；乐器 10:40 / 11:30 / 15:10 / 16:10 / 17:10 / 19:00 / 19:55 / 21:10</p>
+        <p style="font-size:.86rem;color:var(--ink2);margin-top:8px"><b>汀江竹筏码头</b>｜非遗打铁花 + 水上风火轮 19:30–19:40 / 21:00–21:10；22 米巨型鳌鱼花灯巡游 19:45–20:00 / 21:15–21:30（朝圣码头至跳石桥观赏）</p>
+        <p style="font-size:.86rem;color:var(--ink2);margin-top:8px"><b>水东街</b>｜邓紫棋模仿秀（叶萱）19:35–20:35（10-01–10-03）；快闪演艺 9:30 / 11:30 / 17:00 / 19:10</p>
+        <p style="font-size:.86rem;color:var(--ink2);margin-top:8px"><b>客家八喜楼</b>｜一楼沉浸式演出 11:00 / 14:30 / 15:30 / 16:30 / 17:30 / 20:00</p>
+      </div>
+    </section>
+
+    <section id="stay">
+      <div class="eyebrow">STAY · 住宿</div>
+      <h2>住宿：定哪里好</h2>
+      <div class="note-row"><span class="ic">🎯</span><div><b>先给结论</b>：车要停、灯要放、巷子车进不去——住<b>「古城核心步行圈内 + 自带或紧邻停车场」</b>的地方，车停进去就别动了。放完孔明灯 21:30 走回来 5 分钟，比什么都强。</div></div>
+      <table class="tb">
+        <tr><th>档</th><th>酒店</th><th>地址</th><th>为什么选它</th><th>注意</th></tr>
+        <tr><td><b>氛围首选</b></td><td>三厅井·客家土楼民宿（卧龙书院店）</td><td>汀州镇县前街 21 号</td><td>离卧龙书院最近的特色住宿，客家土楼主题，有停车场。<b>放完灯走回来 3 分钟</b></td><td>民宿无电梯，行李重的先问</td></tr>
+        <tr><td>氛围备选</td><td>桂花树下客栈</td><td>汀州镇和平路 39 号</td><td>距卧龙书院步行 150 米，评分 4.7，院子安静</td><td>巷子里，车到不了门口</td></tr>
+        <tr><td><b>品质最稳</b></td><td>全季酒店（龙岩长汀古城店）</td><td>汀州镇朝斗岩路 4 号</td><td>连锁不翻车，24h 前台，<b>有停车场 + 充电车位 + 洗衣房</b>，步行进古城 8–10 分钟</td><td>离核心区稍远一点点</td></tr>
+        <tr><td>位置最好</td><td>柏曼酒店（长汀古城济川门店）</td><td>汀州镇兆征路 35 号</td><td>济川门旁 224 米，出门就是地标</td><td>兆征路 10–22 时最堵，进出趁早</td></tr>
+        <tr><td>老牌稳妥</td><td>长汀宾馆</td><td>汀州镇西外街 3 号</td><td>老牌国营，地面停车场；早/夜宵自助口碑好，55 元/位能吃到本地小吃</td><td>设施偏旧</td></tr>
+        <tr><td>要享受</td><td>汀州建国饭店</td><td>—</td><td>中式园林 + 江景客房，400–700 元</td><td>价位高一档</td></tr>
+      </table>
+      <div class="note-row"><span class="ic">👉</span><div><b>我替你们挑的话</b>：两人出行、重点是那一晚的氛围 → <b>三厅井·客家土楼民宿</b> 或 <b>桂花树下客栈</b>，放灯那晚不用走远路，值回票价。要是更在乎"睡得踏实、不踩民宿雷" → <b>全季</b>，自驾最省心。</div></div>
+      <div class="warn-line">🚨 国庆价格会明显上浮（平日民宿 100–150 元，假期普遍翻倍以上），<b>今天就订，选可免费取消的</b>。</div>
+      <div class="card" style="margin-top:14px">
+        <h3 style="font-size:1rem;margin-bottom:6px">订房问三样</h3>
+        <p style="font-size:.9rem;color:var(--ink2)">① 有没有自己的停车位（古城巷子里车到不了门口，这是自驾第一问题）　② 步行到卧龙书院几分钟　③ 含不含早</p>
+      </div>
+    </section>
+
+    <section id="cost">
+      <div class="eyebrow">COST · 预算</div>
+      <h2>预算（2 人合计）</h2>
+      <div class="stats">
+        <div class="stat"><div class="n">1660–2650</div><div class="l">两人合计（元）</div></div>
+        <div class="stat"><div class="n">830–1330</div><div class="l">人均（元）</div></div>
+        <div class="stat"><div class="n">¥0</div><div class="l">过路费（走免费时段）</div></div>
+      </div>
+      <table class="tb">
+        <tr><th>项目</th><th>金额</th><th>说明</th></tr>
+        <tr><td>油费</td><td>约 420 元</td><td>往返约 700 公里 × 0.6 元/km【估算】</td></tr>
+        <tr><td>过路费</td><td><b>0 元</b></td><td>去程 0 点后下高速免费；返程 10-02 在免费期内（省约 300 元往返）</td></tr>
+        <tr><td>住宿</td><td>700–1400 元</td><td>2 晚不换，国庆价 350–700/晚</td></tr>
+        <tr><td>门票</td><td>120–196 元</td><td>卧龙书院 60×2 = 120；若买联票 85–98×2</td></tr>
+        <tr><td>孔明灯押金</td><td>20 元</td><td>10×2，<b>无损回收可退</b></td></tr>
+        <tr><td>餐饮</td><td>320–480 元</td><td>2 天 × 2 人 × 80–120</td></tr>
+        <tr><td>停车</td><td>约 30 元</td><td>10 元/天 × 3 天</td></tr>
+        <tr><td>特产</td><td>50–100 元</td><td>豆腐干为主</td></tr>
+      </table>
+      <p style="font-size:.84rem;color:var(--ink3);margin-top:10px">隐藏成本已单列（过路费 / 停车 / 押金 / 特产），没漏项。</p>
+    </section>
+
+    <section id="sos">
+      <div class="eyebrow">SOS · 应急</div>
+      <h2>应急 Plan B</h2>
+      <div class="sos-grid">
+        <div class="sos"><h4>下雨，孔明灯取消</h4><p>三元阁古筝 20:00 场 → 水东街邓紫棋模仿秀 19:35–20:35 → 八喜楼 20:00 场（室内）→ 汀江打铁花 21:00（雨小）。古城街区全免费，不进馆也能玩一晚。</p></div>
+        <div class="sos"><h4>堵车严重，白天被砍</h4><p>保"店头街 + 卧龙书院夜场"，博物馆和文庙砍掉不心疼。</p></div>
+        <div class="sos"><h4>卧龙书院票售罄 / 限流</h4><p>现场窗口或公众号问当日放票；退路是三元阁 + 水东街的免费演出，一条不少。</p></div>
+        <div class="sos"><h4>车位全满</h4><p>问交警"假日共享"机关单位停车场（去年 21 个单位 2600 余车位，今年是否延续未核实）；别停小巷，会抓拍。</p></div>
+        <div class="sos"><h4>肠胃不适</h4><p>备蒙脱石散。客家菜偏咸偏油，客家米酒后劲不小。</p></div>
+        <div class="sos"><h4>雨天夜驾</h4><p>厦蓉高速隧道多、路面湿滑，降速、控距、亮尾，别猛打方向。</p></div>
+      </div>
+    </section>
+
+    <section id="eat">
+      <div class="eyebrow">EAT · 美食清单</div>
+      <h2>美食清单（忌口：大蒜 / 洋葱 / 葱花）</h2>
+      <div class="warn-line">🔴 <b>先背这句口令</b>：<b>"不要大蒜、不要洋葱、不要葱花"</b> —— 每进一家店点单时三连说。客家菜爱用葱蒜提味，重点盯三个地方：<b>汤粉面类默认撒葱花、蘸料碟里有蒜蓉、炒青菜下蒜末</b>。</div>
+
+      <table class="tb">
+        <tr><th>哪一餐</th><th>店</th><th>吃什么</th><th>忌口怎么处理</th></tr>
+        <tr><td>9-30 晚餐</td><td>泉州出发前 / 服务区</td><td>—</td><td>建议出发前吃饱，服务区国庆夜人多</td></tr>
+        <tr><td>9-30 宵夜 · 随意</td><td>酒店周边 / 长汀宾馆夜宵自助（到 22:30，55 元/位）</td><td>簸箕粄、泡猪腰</td><td>先看有没有葱花，有就跳过</td></tr>
+        <tr><td>10-01 早餐</td><td>宣成簸箕粄（多家分店）/ 涂坊簸箕粄</td><td>簸箕粄（米皮裹笋干肉末）</td><td>⚠️ <b>蒜蓉酱要另给、别淋上去</b></td></tr>
+        <tr><td>10-01 午餐</td><td><b>七星饭店</b>（店头街 154 号，三元阁往南 50 米）</td><td>白斩河田鸡 38、烧大块 38、汆大肠 15，人均 50–60</td><td>✅ 河田鸡蘸碟<b>要姜蓉不要蒜</b></td></tr>
+        <tr><td>10-01 晚餐</td><td><b>水东街</b>（有间饭店 / 胜泉小吃 / 四喜楼）</td><td>泡猪腰、芋子饺、煎薯饼、盐酒鸡</td><td>泡猪腰先说"不放葱花"；芋子饺馅料问一句</td></tr>
+        <tr><td>10-02 早餐</td><td><b>胜泉小吃</b>（水东街肯德基旁）或 <b>斋公烧麦</b>（东大街 111 号）</td><td>泡猪腰 13、拌芋子饺 6 / 烧麦 12、豆腐饺子 8、牛滑汤 10</td><td>同上，汤面类重点盯</td></tr>
+        <tr><td>10-02 午餐</td><td><b>三元老彭饭店</b>（兆征路三元阁 1 栋 103 号）</td><td>牛肉焖豆腐 32、客家酿豆腐 22、爆炒大肠 30，人均 50–60</td><td>焖豆腐先问有没有葱蒜</td></tr>
+      </table>
+      <p style="font-size:.84rem;color:var(--ink3);margin-top:10px">早餐与宵夜都是"随意"设定——不限定哪天，哪天想吃就去。</p>
+
+      <div class="card" style="margin-top:14px">
+        <h3 style="font-size:1rem;margin-bottom:8px">忌口红绿灯</h3>
+        <p style="font-size:.9rem;color:var(--ink2)">✅ <b>放心点</b>：白斩河田鸡（蘸碟另上）、盐酒鸡、长汀豆腐干、煎薯饼（薯 + 米粉，一般无葱蒜）、斋公烧麦</p>
+        <p style="font-size:.9rem;color:var(--ink2);margin-top:6px">⚠️ <b>点单时明确交代</b>：泡猪腰、汆牛肉、鸡肠面（本地人爱撒葱花）、芋子饺（馅料可能含葱）、客家酿豆腐、所有炒青菜（说"清炒不放蒜"）</p>
+        <p style="font-size:.9rem;color:var(--ink2);margin-top:6px">❌ <b>直接跳过</b>：<b>灯盏糕</b>（米浆里直接掺葱花做的，躲不掉）、任何"蒜蓉/葱爆"开头的菜</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1rem;margin-bottom:6px">避坑</h3>
+        <p style="font-size:.9rem;color:var(--ink2)">景区内白斩河田鸡标价 <b>68 元以上基本是溢价</b>，优先七星饭店、满园春这类本地店；<b>散装米酒慎买</b>，超市瓶装性价比高得多；少数巷内小店 <b>只收现金</b>，备点零钱。找店心法：不必非吃固定哪家，<b>人多的一般没错</b>；先看差评，能接受再去。</p>
+      </div>
+    </section>
+
+    <section id="gift">
+      <div class="eyebrow">GIFT · 特产</div>
+      <h2>特产与伴手礼</h2>
+      <table class="tb">
+        <tr><th>带什么</th><th>是什么</th><th>哪里买</th><th>好不好带</th></tr>
+        <tr><td><b>长汀豆腐干</b> ⭐</td><td>闽西八大干之首，唐朝开元年间就有，1200 多年；瞿秋白在长汀狱中写"中国的豆腐也是很好吃的东西，世界第一"</td><td>县城超市（日日营、朝天门豆腐干等）比景区店便宜，店头街也能买</td><td>⭐ 真空小包最方便，认准产地直供，<b>别买天价礼盒</b></td></tr>
+        <tr><td>客家米酒</td><td>本地自酿</td><td>超市瓶装</td><td>散装慎买，价格水分大</td></tr>
+        <tr><td>竹编小灯笼 / 汀州古城限定吧唧</td><td>官方活动集章兑换</td><td>济川门、卧龙书院、谢公坊集章</td><td><b>免费拿</b>，小灯笼出片</td></tr>
+      </table>
+      <div class="note-row"><span class="ic">💡</span><div><b>别在景点门口买</b>——景区出口比市区超市常贵三成。</div></div>
+
+  <div class="card" style="margin-top:14px">
+    <p style="font-size:.86rem;color:var(--ink2)"><b>方案状态</b>：截至 2026-09-30 核查时可执行；孔明灯放飞为户外项目，受雨/风影响可能取消，属条件式安排，已配雨天 Plan B。<br>门票价格、停车场收费、天气预报均为 2026-09-30 实查，出行前请再确认一次。</p>
+  </div>
+</section>
+
+    <footer style="padding:64px 0 80px;text-align:center">
+      <h2>长汀古城路书 · 2 晚 3 天自驾版</h2>
+      <p>泉州出发 · 2026-09-30 → 10-02 · 两人自驾 · 住一家不换<br>本地单文件 · 无外部依赖 · 断网可打开<br>信息 2026-09-30 联网实查 · 未核实项已标注</p>
+      <p>配图：古城导览图为<b>本趟自绘手绘示意图（示意，非等比例、仅供参考）</b>，非实拍照片；未使用外部图源<br>未核实项：曲凹哩/三洲湿地距县城距离、机关单位共享车位今年是否延续、官方公众号票价</p>
+      <p style="margin-top:18px;font-weight:700">方案仅供参考——安全和开心，才是最重要的。🌕</p>
+    </footer>
+  </div>
+</main>
+<button class="backtop" id="backtop" aria-label="回到顶部">↑</button>
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 1. 当日模式：按今天日期高亮对应行程日 ---------- */
+  var TRIP = { "2026-09-30":"day1", "2026-10-01":"day2", "2026-10-02":"day3" };
+  function todayStr(){
+    var d = new Date();
+    var m = ("0"+(d.getMonth()+1)).slice(-2), day = ("0"+d.getDate()).slice(-2);
+    return d.getFullYear()+"-"+m+"-"+day;
+  }
+  var todayId = TRIP[todayStr()];
+  if (todayId){
+    var sec = document.getElementById(todayId);
+    if (sec){
+      var card = sec.querySelector(".day");
+      if (card) card.classList.add("today");
+      var navA = document.querySelector('.side nav a[href="#'+todayId+'"]');
+      if (navA) navA.innerHTML = '<span class="dot"></span>' + navA.textContent + ' · 今天';
+      function jumpToday(){ lockNav(todayId); sec.scrollIntoView({behavior:"instant", block:"start"}); }
+      /* 布局稳定后再跳（固定 600ms 会撞上 SVG/字体重排，落点漂移一整个区块——东京版实测） */
+      if (document.readyState === "complete"){ setTimeout(jumpToday, 300); }
+      else { window.addEventListener("load", function(){ setTimeout(jumpToday, 300); }); }
+    }
+  } else {
+    var prep = document.getElementById("prepCard");
+    if (prep && todayStr() < "2026-09-30") prep.style.border = "2px solid var(--accent)";
+  }
+
+  /* ---------- 2. 字号三档（记忆） ---------- */
+  var FONTS = ["17px","19px","21px"];
+  var fi = 1;
+  try { fi = Math.max(0, Math.min(2, parseInt(localStorage.getItem("cting_font")||"1",10)||0)); } catch(e){}
+  function applyFont(){ document.documentElement.style.setProperty("--fs", FONTS[fi]); }
+  applyFont();
+  function saveFont(){ try{ localStorage.setItem("cting_font", String(fi)); }catch(e){} }
+  document.getElementById("fontInc").addEventListener("click", function(){ if(fi<2){fi++;applyFont();saveFont();} });
+  document.getElementById("fontDec").addEventListener("click", function(){ if(fi>0){fi--;applyFont();saveFont();} });
+
+  /* ---------- 3. 打印 ---------- */
+  document.getElementById("printBtn").addEventListener("click", function(){ window.print(); });
+
+  /* ---------- 4. 勾选清单（记忆） ---------- */
+  document.querySelectorAll(".check li").forEach(function(li, i){
+    var box = li.querySelector("input");
+    var key = "cting_chk_" + box.id;
+    try { box.checked = localStorage.getItem(key) === "1"; } catch(e){}
+    if (box.checked) li.classList.add("done");
+    li.addEventListener("click", function(ev){
+      if (ev.target.tagName !== "INPUT"){ box.checked = !box.checked; }
+      li.classList.toggle("done", box.checked);
+      try{ localStorage.setItem(key, box.checked ? "1" : "0"); }catch(e){}
+    });
+  });
+
+  /* ---------- 5. 滚动监听：侧栏高亮 + 入场动效 ----------
+     高亮双通道：滚动 = 贴顶窄带 observer（12%~22%，短区块也顺序逐个亮）；
+     点击/当日跳转 = navLock 目标锁（点哪亮哪，平滑滚动途中不闪跳）。 */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".side nav a"));
+  var secs = Array.prototype.slice.call(document.querySelectorAll("main section"));
+  var navLock = null, lockTimer = null;
+  function setOn(id){
+    navLinks.forEach(function(a){ a.classList.toggle("on", a.getAttribute("href") === "#"+id); });
+  }
+  function lockNav(id){
+    navLock = id; setOn(id);
+    if (lockTimer) clearTimeout(lockTimer);
+    lockTimer = setTimeout(function(){ navLock = null; }, 1200);
+  }
+  navLinks.forEach(function(a){
+    a.addEventListener("click", function(){ lockNav((a.getAttribute("href") || "").slice(1)); });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){
+        en.target.classList.add("in");
+        if (!navLock) setOn(en.target.id);
+      }
+    });
+  }, { rootMargin: "-12% 0px -78% 0px" });
+  secs.forEach(function(s){ io.observe(s); });
+
+  /* ---------- 6. 返回顶部 ---------- */
+  var bt = document.getElementById("backtop");
+  window.addEventListener("scroll", function(){
+    bt.classList.toggle("show", window.scrollY > 600);
+  }, { passive:true });
+  bt.addEventListener("click", function(){ window.scrollTo({ top:0, behavior:"smooth" }); });
+})();
+</script>
+<script>
+/* 兜底：若上方脚本报错导致入场动效未初始化，3 秒后强制显示全部内容 */
+setTimeout(function(){
+  if (!document.querySelector('main section.in')){
+    document.querySelectorAll('main section').forEach(function(s){ s.classList.add('in'); });
+  }
+}, 3000);
+</script>
+
+<script>
+(function(){
+const target=new Date("2026-10-01T20:15:00").getTime();
+function tick(){
+ let d=Math.max(0,target-Date.now());
+ let s=Math.floor(d/1000);
+ document.getElementById("cd-day").textContent=Math.floor(s/86400);
+ document.getElementById("cd-hour").textContent=Math.floor(s%86400/3600);
+ document.getElementById("cd-min").textContent=Math.floor(s%3600/60);
+ document.getElementById("cd-sec").textContent=s%60;
+}
+setInterval(tick,1000);tick();
+})();
+function openMap(name){
+ location.href="https://uri.amap.com/search?keyword="+encodeURIComponent(name);
+}
+</script>
+
+</body>
+</html>
